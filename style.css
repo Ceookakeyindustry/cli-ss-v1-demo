@@ -1,0 +1,551 @@
+/* ===========================
+   StudentSync V1
+   Made by Harjinder
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:#0d1117;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+/* Background */
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at top right,#3b82f620,transparent 30%),
+    radial-gradient(circle at bottom left,#8b5cf620,transparent 30%),
+    #0d1117;
+
+    z-index:-2;
+
+}
+
+/* Navbar */
+
+nav{
+
+    width:100%;
+
+    padding:22px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:sticky;
+
+    top:0;
+
+    backdrop-filter:blur(15px);
+
+    background:rgba(13,17,23,.65);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    z-index:100;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:25px;
+
+    align-items:center;
+
+}
+
+.nav-links a{
+
+    color:#c9d1d9;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover{
+
+    color:#58a6ff;
+
+}
+
+.github-btn{
+
+    background:#238636;
+
+    color:white!important;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+}
+
+.github-btn:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 0 20px rgba(35,134,54,.4);
+
+}
+
+/* Hero */
+
+.hero{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:auto;
+
+    min-height:90vh;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+}
+
+.version{
+
+    display:inline-block;
+
+    background:#1f6feb;
+
+    padding:8px 18px;
+
+    border-radius:50px;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    color:#b3b8c5;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.hero-buttons a,
+.hero-buttons button{
+
+    border:none;
+
+    cursor:pointer;
+
+    text-decoration:none;
+
+    padding:15px 28px;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.hero-buttons a{
+
+    background:#238636;
+
+    color:white;
+
+}
+
+.hero-buttons button{
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.hero-buttons a:hover,
+.hero-buttons button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+/* Terminal */
+
+.terminal{
+
+    background:#161b22;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+.terminal-top{
+
+    background:#21262d;
+
+    padding:15px;
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.red,.yellow,.green{
+
+    width:14px;
+
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.red{background:#ff605c;}
+.yellow{background:#ffbd44;}
+.green{background:#00ca4e;}
+
+pre{
+
+    padding:35px;
+
+    color:#58a6ff;
+
+    font-size:15px;
+
+    font-family:"JetBrains Mono",monospace;
+
+    line-height:1.8;
+
+}
+
+/* Sections */
+
+section{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:120px auto;
+
+}
+
+section h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+section p{
+
+    color:#b3b8c5;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/* Stats */
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.card{
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#58a6ff;
+
+}
+
+.card h2{
+
+    font-size:42px;
+
+}
+
+.card h3{
+
+    margin:15px 0;
+
+}
+
+/* Features */
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:rgba(255,255,255,.05);
+
+    border-radius:22px;
+
+    padding:35px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:#58a6ff;
+
+}
+
+.feature-card h3{
+
+    margin:20px 0 12px;
+
+}
+
+/* Commands */
+
+.command{
+
+    background:#161b22;
+
+    border-radius:18px;
+
+    padding:18px 25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.command code{
+
+    color:#58a6ff;
+
+    font-family:"JetBrains Mono",monospace;
+
+}
+
+.command button{
+
+    border:none;
+
+    background:#238636;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.command button:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:120px;
+
+    padding:70px 20px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+footer h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+footer p{
+
+    color:#8b949e;
+
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.stats{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.stats{
+
+grid-template-columns:1fr;
+
+}
+
+.nav-links{
+
+display:none;
+
+}
+
+section h2{
+
+font-size:34px;
+
+}
+
+}

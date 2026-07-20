@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentSync V1</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<nav>
+
+    <div class="logo">
+        🎓 StudentSync
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#install">Install</a>
+
+        <a class="github-btn"
+        href="https://github.com/Ceookakeyindustry/studentsync-version1"
+        target="_blank">
+        GitHub
+        </a>
+
+    </div>
+
+</nav>
+
+<header class="hero">
+
+    <div class="hero-left">
+
+        <span class="version">
+            Version 1
+        </span>
+
+        <h1>
+
+            StudentSync
+
+        </h1>
+
+        <p>
+
+            A modern Python command-line student management system
+            built for managing student records efficiently.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="https://github.com/Ceookakeyindustry/studentsync-version1"
+            target="_blank">
+
+                View Source
+
+            </a>
+
+            <button onclick="scrollInstall()">
+
+                Installation
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="terminal">
+
+            <div class="terminal-top">
+
+                <span class="red"></span>
+                <span class="yellow"></span>
+                <span class="green"></span>
+
+            </div>
+
+<pre id="terminal">
+
+$ python main.py
+
+=========================
+ STUDENT GRADE MANAGER
+=========================
+
+1. Add Student
+2. View Students
+3. Search Student
+4. Edit Student
+5. Delete Student
+6. Exit
+
+Choose an option...
+
+</pre>
+
+        </div>
+
+    </div>
+
+</header>
+
+<section class="stats">
+
+<div class="card">
+
+<h2>🐍</h2>
+
+<h3>Python</h3>
+
+<p>Language</p>
+
+</div>
+
+<div class="card">
+
+<h2>💾</h2>
+
+<h3>JSON</h3>
+
+<p>Storage</p>
+
+</div>
+
+<div class="card">
+
+<h2>🖥️</h2>
+
+<h3>CLI</h3>
+
+<p>Interface</p>
+
+</div>
+
+<div class="card">
+
+<h2>📂</h2>
+
+<h3>CRUD</h3>
+
+<p>Operations</p>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>
+
+About StudentSync
+
+</h2>
+
+<p>
+
+StudentSync Version 1 is a Python command-line
+application that allows users to manage student
+records directly from the terminal.
+
+The project supports adding,
+viewing,
+editing,
+searching,
+and deleting students while storing
+all information permanently using JSON.
+
+</p>
+
+</section>
+
+<section id="features">
+
+<h2>
+
+Features
+
+</h2>
+
+<div class="features-grid">
+
+<div class="feature-card">
+➕
+<h3>Add Students</h3>
+<p>Create student records.</p>
+</div>
+
+<div class="feature-card">
+📋
+<h3>View Students</h3>
+<p>Display all stored records.</p>
+</div>
+
+<div class="feature-card">
+🔍
+<h3>Search</h3>
+<p>Find students instantly.</p>
+</div>
+
+<div class="feature-card">
+✏️
+<h3>Edit</h3>
+<p>Update student information.</p>
+</div>
+
+<div class="feature-card">
+🗑️
+<h3>Delete</h3>
+<p>Remove records permanently.</p>
+</div>
+
+<div class="feature-card">
+🏆
+<h3>Auto Grades</h3>
+<p>Average & grades calculated automatically.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="install">
+
+<h2>
+
+Run Locally
+
+</h2>
+
+<div class="command">
+
+<code id="clone">
+
+git clone https://github.com/Ceookakeyindustry/studentsync-version1.git
+
+</code>
+
+<button onclick="copyText('clone')">
+
+Copy
+
+</button>
+
+</div>
+
+<div class="command">
+
+<code id="cd">
+
+cd studentsync-version1
+
+</code>
+
+<button onclick="copyText('cd')">
+
+Copy
+
+</button>
+
+</div>
+
+<div class="command">
+
+<code id="run">
+
+python main.py
+
+</code>
+
+<button onclick="copyText('run')">
+
+Copy
+
+</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>
+
+Made by Harjinder
+
+</h2>
+
+<p>
+
+StudentSync Version 1
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
